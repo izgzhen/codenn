@@ -48,7 +48,7 @@ function run_bleu(state)
 	end
 	tf:close()
 	local cmd
-	cmd = 'python ../utils/bleu.py ' .. params.dev_ref_file .. ' < ' .. tmpFilename 
+	cmd = 'python2 ../utils/bleu.py ' .. params.dev_ref_file .. ' < ' .. tmpFilename 
 	print(cmd .. '\n')
 	local bleu = tonumber(os.capture(cmd))
 	print('BLEU: ' .. bleu .. '\n')
