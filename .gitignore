@@ -60,5 +60,5 @@ nosetests.xml
 *.eps
 *.pdf
 
-sql.decoder
-sql.encoder
+*.decoder
+*.encoder
