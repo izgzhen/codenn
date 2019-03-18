@@ -73,6 +73,7 @@ function main()
 	cmd:option('-beam_size', 10, 'Beam Size')
 	cmd:option('-encoder', '', 'output')
 	cmd:option('-decoder', '', 'output')
+	cmd:option('-decay', 0.8, 'Learning rate decay rate')
 	cmd:option('-lr', 0.5, 'Initial learning rate')
 	cmd:option('-shuffle', false, 'Shuffle batches?')
 	cmd:option('-language', 'code', 'Code language')
@@ -91,7 +92,7 @@ function main()
 		max_grad_norm=5,
 		init_weight=opt.init_weight,
 		dropout=opt.dropout,
-		decay=0.8,
+		decay=opt.decay,
 		normalize=opt.normalize,
 		max_length=20,
 		beam_size=opt.beam_size,
